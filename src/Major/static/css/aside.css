@@ -1,0 +1,17 @@
+.asideinfo{
+
+		width: 25%;
+		float: left;
+		margin 1% 1% 1% 0%;
+		border-radius: 7px;
+		-webkit-border-radius: 7px;
+		-max-border-radius: 7px;
+		background-color: #E6E6E6;
+
+
+	}
+	.asideinfo p,h3{
+
+		margin-left: 5%;
+
+	}

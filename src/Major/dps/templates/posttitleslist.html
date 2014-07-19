@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+{% for post in object_list %}
+<p><h3>id = {{post.customer }}</h3>product ={{post.productName}}</br>Quantity = {{ post.Quantity}}</br>contact ={{ post.contact_no}}</br>{{post.date_order}}</p>
+
+{% endfor %}
+{% endblock %}

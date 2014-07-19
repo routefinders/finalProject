@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content%}
+
+
+{% for post in object_list %}
+<h2><a href ="/dps/{{post.id}}">{{ post.first_name }}</a></h2>
+<div class = "post_meta">username ={{ post.username }} </div>
+<div class = "post_meta">email ={{ post.email }} </div>
+<div class = "post_body">password = {{ post.password|safe }} </div>
+
+{% endfor %}
+{% endblock %}

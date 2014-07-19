@@ -1,0 +1,25 @@
+lead/models.py:
+
+from django.db import models
+
+class Lead(models.Model):
+    name = models.CharField(max_length=50)
+    email = models.CharField(max_length=256)
+    phone = models.CharField(max_length=20)
+    twitter_handle = models.CharField(max_length=20)
+    github_handle = models.CharField(max_length=20)
+	
+	
+lead/views.py:
+
+from django.http import HttpResponse
+from django.core import serializers
+from lead.models import Lead
+
+def index(request):
+    leads_as_json = serializers.serialize('json', Lead.objects.all())
+    return HttpResponse(leads_as_json, content_type='json')
+	
+	
+	#OutPuts
+	#[{"pk": 1, "model": "lead.lead", "fields": {"twitter_handle": "johndoe", "name": "John Doe", "phone": "1(234)567-8910", "email": "john@doe.com", "github_handle": "johndoe"}}]

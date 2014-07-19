@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang ="en">
+
+<head>
+	<title>Deliver Planning System</title>
+	<!--<link rel="icon" type="image/png" href="/static/images/logo.png">-->
+	<meta charset = "utf-8"/>
+	<link rel = "stylesheet" href = "/static/css/style.css" type = "text/css">
+	<!--<script type = "text/javascript" src = "/static/js/js.js" ></script>-->
+	<meta name = "viewport content= "width-device-width,initial-scale =1.0">
+	<!--<<script type="text/javascript">
+            window.location.href = ""/dps/index./""
+        </script>-->
+	
+
+</head>
+<body class = "body">
+	<header class = "mainHead">
+		<!--<center><img src = "/static/images/logo.png" height = "150" ></center>-->
+	
+		<nav>
+			<ul>
+			<li><a href = "/dps/">Home<a/></li>
+			<li><a href = "/dps/userdetail/">Userdetail<a/></li>
+			<li><a href = "/dps/orderdetail/">Orderdetail<a/></li>
+			<li><a href = "/dps/form/">Order<a/></li>
+			</ul>
+		</nav>
+	</header>
+	<aside class = "asideinfo">
+		<article>
+			<h3>Full Details</h3>
+				
+				
+					{% for post in object_list %}
+					
+			<h2>ID= {{post.id}}</h2>
+			<p>{{ post.first_name }}&nbsp;{{ post.last_name }}</br>email={{post.email}}</p>
+			<script>
+					//var name  = "{{post.id}}";
+		
+						//alert("welcome");
+
+				</script>
+			{% endfor %}
+
+
+		</article>
+</aside>
+<div class = "mainContent">
+		<div class = "content">
+			{% block content %}
+			{% endblock %}
+		</div>
+		
+	</div>
+
+
+	<footer class = "mainFooter">
+		<center><a href = "#" taget = "_blank"><p>copyright@ </p></a></center>
+
+	</footer>
+
+</body>
+<html>

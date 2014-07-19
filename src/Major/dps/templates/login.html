@@ -1,0 +1,15 @@
+{% extends "logbase.html" %}
+
+{% block content%}
+
+<form method="POST" >
+{% csrf_token %}
+<pre>
+    UserName:   <input type="input" name="uname"> </input>
+    Password:   <input type="password" name="password"> </input>
+	
+			<input type="submit"value = "login"/>
+	{{error}}
+</pre>
+</form>
+{% endblock %} 
