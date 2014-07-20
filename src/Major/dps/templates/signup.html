@@ -1,7 +1,7 @@
 {% extends "logbase.html" %}
 {% block content%}
 <form method="POST" >
-{% csrf_token %}
+{% csrf_token %}<fieldset><legend>Sign UP</legend>
 <pre>
 	FirstName:   <input type="input" name="fname"> </input>
 	LastName:    <input type="input" name="lname"> </input>
@@ -14,7 +14,7 @@
 	
 			<input type="submit"value = "Sign Up"/>
 	{{error}}
-</pre>
+</pre></fieldset>
 </form>
 
 {% endblock %}

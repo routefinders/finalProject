@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
-
+<fieldset>
 <h2><a href ="/dps/{{post.id}}">{{ post.first_name }}</a></h2>
 <div class = "post_meta"> {{ post.last_name}} </div>
 <div class = "post_body"> {{ post.email}} </div>
 <div class = "post_body"> {{ post.phone_number}} </div>
-<div class = "post_body"> {{ post.address}} </div>
+<div class = "post_body"> {{ post.address}} </div></fieldset>
 
 {% endblock %}

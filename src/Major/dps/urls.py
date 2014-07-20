@@ -21,6 +21,7 @@ urlpatterns =patterns('',
 						url(r'^login/$',login),
 						url(r'^form/$',TakeForm ),
 						url(r'^signup/$',signup ),
+						url(r'^home/$',my_view),
 						# url(r'^form/$',ListView.as_view(
 												# queryset = Users.objects.all().order_by("username")[:5],
 												# template_name="form.html")),

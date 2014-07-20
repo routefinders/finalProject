@@ -32,10 +32,10 @@
 			<h3>Full Details</h3>
 				
 				
-					{% for post in object_list %}
+					{% for post in object_list %}<fieldset>
 					
 			<h2>ID= {{post.id}}</h2>
-			<p>{{ post.first_name }}&nbsp;{{ post.last_name }}</br>email={{post.email}}</p>
+			<p>{{ post.first_name }}&nbsp;{{ post.last_name }}</br>email={{post.email}}</p></fieldset>
 			<script>
 					//var name  = "{{post.id}}";
 		

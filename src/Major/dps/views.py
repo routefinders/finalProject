@@ -9,6 +9,15 @@ from django.core import serializers
 from validation import *
 #import sqlite3
 import pickle
+#----------------test code--------
+#from django.utils.translation import ugettext as _
+from django.utils.translation import ugettext 
+def my_view(request):
+	#output = _("Welcome to my site.")
+	output = ugettext("Welcome to my site.")
+	return HttpResponse(output)
+#----------------------------------
+	
 def landing(request):
 	return render_to_response('index.html')#'logged_out': '1',}, context_instance=RequestContext(request))
 def contactus(request):
@@ -67,7 +76,7 @@ def TakeForm(request):
 	'quantity' : request.POST.get('quantity',''),
 	'latlng' : request.POST.get('latlng','')},
 	context_instance=RequestContext(request))
-	
+
 def to_json(request):#models to json
 	
 	tojson= serializers.serialize('json',Orders.objects.all())

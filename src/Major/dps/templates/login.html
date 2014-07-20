@@ -3,13 +3,13 @@
 {% block content%}
 
 <form method="POST" >
-{% csrf_token %}
-<pre>
+{% csrf_token %}<fieldset><legend>Sign In</legend><pre>
     UserName:   <input type="input" name="uname"> </input>
     Password:   <input type="password" name="password"> </input>
 	
-			<input type="submit"value = "login"/>
+		<input type="submit"value = "login"/>
 	{{error}}
 </pre>
+</fieldset>
 </form>
 {% endblock %} 

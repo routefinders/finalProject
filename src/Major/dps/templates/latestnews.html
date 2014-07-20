@@ -3,10 +3,11 @@
 
 
 {% for post in object_list %}
+<fieldset>
 <h2><a href ="/dps/{{post.id}}">{{ post.first_name }}</a></h2>
 <div class = "post_meta">username ={{ post.username }} </div>
 <div class = "post_meta">email ={{ post.email }} </div>
-<div class = "post_body">password = {{ post.password|safe }} </div>
+<div class = "post_body">password = {{ post.password|safe }} </div></fieldset>
 
 {% endfor %}
 {% endblock %}
